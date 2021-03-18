@@ -1,6 +1,6 @@
-#include "pch.h";
-#include "util.h";
-#include "Logger.h";
+#include "pch.h"
+#include "util.h"
+#include "Logger.h"
 
 path getDllDir(HMODULE hModule)
 {
