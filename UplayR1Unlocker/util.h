@@ -6,6 +6,7 @@ using std::wstring;
 using std::vector;
 using std::shared_ptr;
 using std::filesystem::absolute;
+using std::filesystem::path;
 
 constexpr auto VERSION = "1.0.0";
 
@@ -21,3 +22,5 @@ bool vectorContains(vector<T> v, T element)
 {
 	return std::find(v.begin(), v.end(), element) != v.end();
 }
+
+path getDllDir(HMODULE hModule);

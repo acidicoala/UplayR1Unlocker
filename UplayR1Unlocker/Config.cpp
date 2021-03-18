@@ -6,11 +6,11 @@ using nlohmann::json;
 // Source: https://stackoverflow.com/a/54394658/3805929
 #define GET(j, key) this->key = j[#key].get<decltype(key)>()
 
-constexpr auto CONFIG_PATH = "UplayR1Unlocker.json";
+constexpr auto CONFIG_PATH = "UplayR1Unlocker.jsonc";
 
-Config::Config()
+Config::Config(HMODULE hModule)
 {
-	auto path = std::filesystem::absolute(CONFIG_PATH).wstring();
+	auto path = getDllDir(hModule) / CONFIG_PATH;
 	std::ifstream ifs(path, std::ifstream::in);
 
 	if(!ifs.good())
@@ -33,4 +33,12 @@ Config::Config()
 	}
 }
 
-Config config;
+void Config::init(HMODULE hModule)
+{
+	if(config != nullptr)
+		return;
+
+	config = new Config(hModule);
+}
+
+Config* config = nullptr;

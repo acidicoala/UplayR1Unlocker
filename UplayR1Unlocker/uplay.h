@@ -12,5 +12,5 @@ constexpr auto ORIG_DLL = L"uplay_r1_loader_o.dll";
 #endif
 
 
-void init();
+void init(HMODULE hModule);
 void shutdown();

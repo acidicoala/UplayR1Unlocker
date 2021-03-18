@@ -3,12 +3,14 @@
 
 class Config
 {
+protected:
+	Config(HMODULE hModule);
 public:
-	Config();
-
 	string log_level = "off";
 	string lang = "default";
 	vector<int> blacklist;
+
+	static void init(HMODULE hModule);
 };
 
-extern Config config;
+extern Config* config;

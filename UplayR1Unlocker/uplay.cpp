@@ -5,9 +5,11 @@
 
 HMODULE originalDLL = nullptr;
 
-void init()
+void init(HMODULE hModule)
 {
-	Logger::init();
+	Config::init(hModule);
+	Logger::init(hModule);
+
 	logger->info("Uplay R1 Unlocker v{}", VERSION);
 
 	originalDLL = LoadLibrary(ORIG_DLL);
@@ -38,7 +40,7 @@ EXPORT int UPLAY_USER_IsOwned(int aUplayId)
 	GET_PROXY_FUNC(UPLAY_USER_IsOwned);
 	auto result = proxyFunc(aUplayId);
 
-	auto isOwned = !vectorContains(config.blacklist, aUplayId);
+	auto isOwned = !vectorContains(config->blacklist, aUplayId);
 
 	logger->info(
 		"UPLAY_USER_IsOwned -> aUplayId: {},\tisOwned: {}\t(legitimately owned: {})",
@@ -50,7 +52,7 @@ EXPORT int UPLAY_USER_IsOwned(int aUplayId)
 
 EXPORT PCSTR UPLAY_INSTALLER_GetLanguageUtf8()
 {
-	if(config.lang == "default")
+	if(config->lang == "default")
 	{
 		GET_PROXY_FUNC(UPLAY_INSTALLER_GetLanguageUtf8);
 		auto result = proxyFunc();
@@ -59,7 +61,7 @@ EXPORT PCSTR UPLAY_INSTALLER_GetLanguageUtf8()
 	}
 	else
 	{
-		logger->info("UPLAY_INSTALLER_GetLanguageUtf8 -> modified lang: {}", config.lang);
-		return config.lang.c_str();
+		logger->info("UPLAY_INSTALLER_GetLanguageUtf8 -> modified lang: {}", config->lang);
+		return config->lang.c_str();
 	}
 }
