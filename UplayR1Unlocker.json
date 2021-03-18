@@ -1,0 +1,7 @@
+{
+	"log_level": "debug",
+	"lang": "default",
+	"blacklist": [
+		// DLC IDs go here
+	]
+}
