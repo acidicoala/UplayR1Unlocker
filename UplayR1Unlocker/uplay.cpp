@@ -12,14 +12,15 @@ void init(HMODULE hModule)
 
 	logger->info("Uplay R1 Unlocker v{}", VERSION);
 
-	originalDLL = LoadLibrary(ORIG_DLL);
+	auto originalPath = getDllDir(hModule) / ORIG_DLL;
+	originalDLL = LoadLibrary(originalPath.c_str());
 	if(originalDLL)
 	{
 		logger->info(L"Successfully loaded original DLL: {}", ORIG_DLL);
 	}
 	else
 	{
-		auto message = fmt::format(L"Failed to load original DLL: {}. Error code: {}", ORIG_DLL, GetLastError());
+		auto message = fmt::format(L"Failed to load original DLL: {}. Error code: {}", originalPath.c_str(), GetLastError());
 		logger->error(message);
 		MessageBox(NULL, message.c_str(), L"Error during initialization", MB_ICONERROR | MB_OK);
 		exit(1);
