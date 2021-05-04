@@ -33,7 +33,7 @@
     <ClInclude Include="util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LinkerExports.h">
+    <ClInclude Include="LoaderLinkerExports.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="uplay.h">
@@ -41,6 +41,12 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoaderLinkerExports64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkerExports.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -70,5 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="UplayR1Unlocker.aps" />
+    <None Include="..\UplayR1Unlocker.jsonc">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

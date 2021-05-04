@@ -17,6 +17,8 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Loader Release|x64 = Loader Release|x64
+		Loader Release|x86 = Loader Release|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
@@ -25,6 +27,10 @@ Global
 		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Debug|x64.Build.0 = Debug|x64
 		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Debug|x86.ActiveCfg = Debug|Win32
 		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Debug|x86.Build.0 = Debug|Win32
+		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Loader Release|x64.ActiveCfg = Loader Release|x64
+		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Loader Release|x64.Build.0 = Loader Release|x64
+		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Loader Release|x86.ActiveCfg = Loader Release|Win32
+		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Loader Release|x86.Build.0 = Loader Release|Win32
 		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Release|x64.ActiveCfg = Release|x64
 		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Release|x64.Build.0 = Release|x64
 		{5A783224-61B5-4CF3-A959-5B185B330E2A}.Release|x86.ActiveCfg = Release|Win32

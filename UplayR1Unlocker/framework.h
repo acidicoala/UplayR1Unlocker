@@ -22,7 +22,15 @@
 #pragma warning(pop)
 
 #ifdef _WIN64
+#ifdef LOADER
+#include "LoaderLinkerExports64.h"
+#else
 #include "LinkerExports64.h"
+#endif
+#else
+#ifdef LOADER
+#include "LoaderLinkerExports.h"
 #else
 #include "LinkerExports.h"
+#endif
 #endif
