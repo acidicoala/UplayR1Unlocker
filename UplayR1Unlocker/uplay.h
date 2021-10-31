@@ -19,7 +19,7 @@ constexpr auto ORIG_DLL = L"uplay_r1_o.dll";
 #endif
 #endif
 
-constexpr auto VERSION = "1.2.0";
+constexpr auto VERSION = "1.2.1";
 
 void init(HMODULE hModule);
 void shutdown();
