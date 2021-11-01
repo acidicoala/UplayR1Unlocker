@@ -61,6 +61,7 @@
 #pragma comment(linker, "/export:UPLAY_OVERLAY_Show=uplay_r1_o.UPLAY_OVERLAY_Show")
 #pragma comment(linker, "/export:UPLAY_OVERLAY_ShowBrowserUrl=uplay_r1_o.UPLAY_OVERLAY_ShowBrowserUrl")
 #pragma comment(linker, "/export:UPLAY_OVERLAY_ShowFacebookAuthentication=uplay_r1_o.UPLAY_OVERLAY_ShowFacebookAuthentication")
+#pragma comment(linker, "/export:UPLAY_OVERLAY_ShowMicroApp=uplay_r1_o.UPLAY_OVERLAY_ShowMicroApp")
 #pragma comment(linker, "/export:UPLAY_OVERLAY_ShowNotification=uplay_r1_o.UPLAY_OVERLAY_ShowNotification")
 #pragma comment(linker, "/export:UPLAY_OVERLAY_ShowShopUrl=uplay_r1_o.UPLAY_OVERLAY_ShowShopUrl")
 #pragma comment(linker, "/export:UPLAY_PARTY_GetFullMemberList=uplay_r1_o.UPLAY_PARTY_GetFullMemberList")
