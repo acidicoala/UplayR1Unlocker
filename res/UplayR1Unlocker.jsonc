@@ -1,0 +1,10 @@
+{
+  "logging": false,
+  "lang": "default",
+  "hook_loader": true,
+  "blacklist": [
+    // DLC IDs go here
+    0,
+    1
+  ]
+}
