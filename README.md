@@ -15,16 +15,9 @@ UplayR1Unlocker does not require any manual configuration. By default, it uses m
 The description of each available option is presented below:
 
 - `logging`: Enables or disables logging into a _UplayR1Unlocker.log_ file. Default: `false`.
-- `lang`: Enables or disables interception of EOS SDK logs. Can cause issues when enabled in *hook* mode. Default: `false`.
-- `eos_logging`: Enables or disables interception of EOS SDK logs. Enabling this option can cause issues in *hook* mode. Default: `false`.
-- `block_metrics`: Blocks reporting of analytics and usage metrics by the game to Epic Online Services. Metrics sent by EOS SDK itself remain unaffected. Default: `false`.
-- `catalog_items`: Options in this object specify behaviour when games use `EOS_Ecom_QueryOwnership` function.
-    - `unlock_all`: Controls if all items should be automatically unlocked. Default: `true`.
-    - `override`: Specifies items ids¹ that override the behaviour of `unlock_all`. If `unlock_all` is _true_, then items ids in this array will be locked. If `unlock_all` is _false_, then items ids in this array will be unlocked. Default: `[]` (empty array).
-- `entitlements`: Options in this object specify behaviour when games use `EOS_Ecom_QueryEntitlements` function.
-    - `unlock_all`: Controls if all entitlements that were requested by their IDs should be automatically unlocked. Default: `true`.
-    - `auto_inject`: Controls if ScreamAPI should fetch from online database a list of all available entitlement IDs, when a game doesn't provide them itself. Default: `true`.
-    - `inject`: Specifies which entitlement ids¹ to inject when a game asks for a list of entitlements that a user owns. Default: `[]` (empty array).
+- `lang`: String that overrides game language if it is not set to `default`. Default: `default`.
+- `hook_loader`: Specifies which DLL to hook. When `true`, the unlocker hooks `uplay_r1_loader(64).dll`. When `false`, it hooks `uplay_r1(64).dll`. Default: `false`.
+- `blacklist`: A list of IDs to keep locked. Default: `[]` (empty list).
 
 ## 👋 Acknowledgements
 

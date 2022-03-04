@@ -13,6 +13,7 @@ configure_version_resource("https://github.com/acidicoala/UplayR1Unlocker")
 
 configure_exports_generator()
 configure_linker_exports(
+    false
     "${ORIGINAL_DLL}_o"
     "${RES_DIR}/${STORE_DLL}.dll"
     "${SRC_DIR}/uplay"

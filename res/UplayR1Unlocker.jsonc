@@ -1,7 +1,7 @@
 {
   "logging": false,
   "lang": "default",
-  "hook_loader": true,
+  "hook_loader": false,
   "blacklist": [
     // DLC IDs go here
     0,
