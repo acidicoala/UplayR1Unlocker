@@ -10,7 +10,7 @@ For user-friendly description, consult the official forum thread. This document 
 
 ## ⚙ Configuration
 
-UplayR1Unlocker does not require any manual configuration. By default, it uses most reasonable options and tries to unlock all DLCs that it can. However, there might be circumstances in which you need more custom-tailored behaviour. In this case you can use a configuration file `UplayR1Unlocker.json` that you can find in the release zip. To use it, simply place it alongside the unlocker DLL. It will be read upon each launch of a game. Configuration file itself is optional, but options within the file are not. In the absence of the config file, default value specified below will be used.
+UplayR1Unlocker does not require any manual configuration. By default, it uses most reasonable options and tries to unlock all DLCs that it can. However, there might be circumstances in which you need more custom-tailored behaviour. In this case you can use a configuration file [`UplayR1Unlocker.json`](./res/UplayR1Unlocker.jsonc) that you can find in this repository. To use it, simply place it alongside the unlocker DLL. It will be read upon each launch of a game. Configuration file itself is optional, but options within the file are not. In the absence of the config file, default value specified below will be used.
 
 The description of each available option is presented below:
 
